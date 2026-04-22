@@ -1,4 +1,3 @@
-import dotenv from "dotenv";
 dotenv.config();
 
 const { Client, GatewayIntentBits } = require("discord.js");
