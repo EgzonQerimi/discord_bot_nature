@@ -1,4 +1,4 @@
-dotenv.config();
+require("dotenv").config();
 
 const { Client, GatewayIntentBits } = require("discord.js");
 const axios = require("axios");
@@ -11,8 +11,7 @@ const client = new Client({
   ],
 });
 
-const WEBHOOK_URL =
-  "https://cupped-mumble-groin.ngrok-free.dev/webhook/discord-nature";
+const WEBHOOK_URL = process.env.WEBHOOK_URL;
 
 client.on("messageCreate", async (message) => {
   if (message.author.bot) return;
